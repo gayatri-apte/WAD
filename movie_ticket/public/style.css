@@ -1,0 +1,21 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+#movies {
+    margin: 20px;
+}
+
+.movie {
+    background: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 300px;
+    border-radius: 8px;
+}
