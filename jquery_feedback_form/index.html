@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Form</title>
+
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- jQuery Mobile JS -->
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!-- PAGE -->
+<div data-role="page" id="page1">
+
+  <!-- HEADER -->
+  <div data-role="header" data-theme="b">
+    <h1>Feedback Form</h1>
+  </div>
+
+  <!-- CONTENT -->
+  <div role="main" class="ui-content">
+
+    <form id="feedbackForm">
+
+      <!-- Name -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <!-- Feedback -->
+      <label for="message">Feedback:</label>
+      <textarea id="message" placeholder="Write your feedback"></textarea>
+
+      <!-- Flipped Toggle Switch -->
+      <label for="recommend">Would you recommend us?</label>
+      <select id="recommend" data-role="slider" data-flip="true">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+
+      <!-- Submit Button -->
+      <button type="button" onclick="submitForm()">Submit</button>
+
+    </form>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div data-role="footer" data-theme="b">
+    <h4>Thank You!</h4>
+  </div>
+
+</div>
+
+<!-- JavaScript -->
+<script>
+function submitForm() {
+  let name = document.getElementById("name").value;
+  let feedback = document.getElementById("message").value;
+  let recommend = document.getElementById("recommend").value;
+
+  alert(
+    "Name: " + name +
+    "\nFeedback: " + feedback +
+    "\nRecommend: " + recommend
+  );
+}
+</script>
+
+</body>
+</html>
