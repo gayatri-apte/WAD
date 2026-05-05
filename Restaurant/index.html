@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Menu</title>
+
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- jQuery Mobile JS -->
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .price {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 🔷 HOME PAGE -->
+<div data-role="page" id="home">
+
+  <div data-role="header" data-theme="b">
+    <h1>🍴 My Restaurant</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+
+    <ul data-role="listview" data-inset="true">
+
+      <li>
+        <a href="#pizza">
+          <img src="https://source.unsplash.com/200x150/?pizza">
+          <h2>Pizza</h2>
+          <p>Click to view details</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="#burger">
+          <img src="https://source.unsplash.com/200x150/?burger">
+          <h2>Burger</h2>
+          <p>Click to view details</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="#pasta">
+          <img src="https://source.unsplash.com/200x150/?pasta">
+          <h2>Pasta</h2>
+          <p>Click to view details</p>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</div>
+
+<!-- 🔷 PIZZA PAGE -->
+<div data-role="page" id="pizza">
+
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>Pizza</h1>
+  </div>
+
+  <div class="ui-content">
+    <img src="https://source.unsplash.com/400x250/?pizza">
+    <h3>Delicious Cheese Pizza</h3>
+    <p>Loaded with cheese and toppings.</p>
+    <p class="price">₹250</p>
+  </div>
+
+</div>
+
+<!-- 🔷 BURGER PAGE -->
+<div data-role="page" id="burger">
+
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>Burger</h1>
+  </div>
+
+  <div class="ui-content">
+    <img src="https://source.unsplash.com/400x250/?burger">
+    <h3>Veg Burger</h3>
+    <p>Crispy patty with fresh veggies.</p>
+    <p class="price">₹150</p>
+  </div>
+
+</div>
+
+<!-- 🔷 PASTA PAGE -->
+<div data-role="page" id="pasta">
+
+  <div data-role="header" data-theme="b">
+    <a href="#home" data-icon="back">Back</a>
+    <h1>Pasta</h1>
+  </div>
+
+  <div class="ui-content">
+    <img src="https://source.unsplash.com/400x250/?pasta">
+    <h3>White Sauce Pasta</h3>
+    <p>Creamy and delicious.</p>
+    <p class="price">₹200</p>
+  </div>
+
+</div>
+
+</body>
+</html>
