@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    font-family: Arial;
+    background: #f4f4f4;
+  }
+  
+  .place {
+    background: white;
+    margin: 20px auto;
+    padding: 15px;
+    width: 350px;
+    border-radius: 10px;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 5px 10px;
+  }
