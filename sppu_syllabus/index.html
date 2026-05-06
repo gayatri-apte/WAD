@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPPU TE-IT Syllabus Portal</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6fb;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .subject-card {
+            transition: transform 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        #syllabusDetails {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SPPU TE-IT</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navBar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="showSyllabus()">Syllabus</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<div class="header">
+    <h1>SPPU TE-IT Syllabus Structure</h1>
+    <p>Third Year Information Technology Engineering</p>
+</div>
+
+<!-- Subjects Section -->
+<div class="container my-5" id="subjects">
+    <h2 class="text-center mb-4">Core Subjects</h2>
+    <div class="row g-4">
+
+        <!-- Subject 1 -->
+        <div class="col-md-4">
+            <div class="card subject-card text-center p-3">
+                <img src="https://img.icons8.com/color/96/artificial-intelligence.png" class="mx-auto">
+                <h5 class="mt-3">Machine Learning</h5>
+                <p>Introduction to ML algorithms and models.</p>
+            </div>
+        </div>
+
+        <!-- Subject 2 -->
+        <div class="col-md-4">
+            <div class="card subject-card text-center p-3">
+                <img src="https://img.icons8.com/color/96/database.png" class="mx-auto">
+                <h5 class="mt-3">Database Management</h5>
+                <p>Advanced DBMS concepts and SQL.</p>
+            </div>
+        </div>
+
+        <!-- Subject 3 -->
+        <div class="col-md-4">
+            <div class="card subject-card text-center p-3">
+                <img src="https://img.icons8.com/color/96/network.png" class="mx-auto">
+                <h5 class="mt-3">Computer Networks</h5>
+                <p>Network protocols and communication.</p>
+            </div>
+        </div>
+
+        <!-- Subject 4 -->
+        <div class="col-md-4">
+            <div class="card subject-card text-center p-3">
+                <img src="https://img.icons8.com/color/96/source-code.png" class="mx-auto">
+                <h5 class="mt-3">Design & Analysis of Algorithms</h5>
+                <p>Algorithm design techniques and analysis.</p>
+            </div>
+        </div>
+
+        <!-- Subject 5 -->
+        <div class="col-md-4">
+            <div class="card subject-card text-center p-3">
+                <img src="https://img.icons8.com/color/96/web.png" class="mx-auto">
+                <h5 class="mt-3">Web Technologies</h5>
+                <p>Frontend and backend web development.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Button -->
+<div class="text-center mb-5">
+    <button class="btn btn-primary btn-lg" onclick="showSyllabus()">View Detailed Syllabus</button>
+</div>
+
+<!-- Detailed Syllabus -->
+<div class="container" id="syllabusDetails">
+    <div class="card p-4">
+        <h3>Detailed Syllabus</h3>
+
+        <h5>Machine Learning</h5>
+        <ul>
+            <li>Supervised & Unsupervised Learning</li>
+            <li>Regression & Classification</li>
+            <li>Neural Networks</li>
+        </ul>
+
+        <h5>DBMS</h5>
+        <ul>
+            <li>Normalization</li>
+            <li>Transactions & Concurrency</li>
+            <li>SQL Queries</li>
+        </ul>
+
+        <h5>Computer Networks</h5>
+        <ul>
+            <li>OSI Model</li>
+            <li>TCP/IP Protocol</li>
+            <li>Routing Algorithms</li>
+        </ul>
+
+        <h5>DAA</h5>
+        <ul>
+            <li>Greedy Algorithms</li>
+            <li>Dynamic Programming</li>
+            <li>Graph Algorithms</li>
+        </ul>
+
+        <h5>Web Technologies</h5>
+        <ul>
+            <li>HTML, CSS, JS</li>
+            <li>Bootstrap</li>
+            <li>Backend Basics</li>
+        </ul>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>© 2026 SPPU TE-IT Portal | Academic Resource</p>
+</div>
+
+<!-- JavaScript -->
+<script>
+    function showSyllabus() {
+        document.getElementById("syllabusDetails").style.display = "block";
+        window.scrollTo({
+            top: document.getElementById("syllabusDetails").offsetTop,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
