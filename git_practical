@@ -1,0 +1,314 @@
+# Experiment No: ____
+
+# Title:
+
+Create Version Control Account on GitHub and Demonstrate Git Commands using Push, Pull, Branch and Merge
+
+---
+
+# Aim:
+
+To create a GitHub account and demonstrate the use of Git commands such as push, pull, branch, and merge.
+
+---
+
+# Software Requirements:
+
+* Git
+* GitHub Account
+* Command Prompt / Terminal
+* Internet Connection
+
+---
+
+# Theory:
+
+Git is a distributed version control system used to track changes in source code during software development. GitHub is a cloud-based platform that stores Git repositories online and helps developers collaborate efficiently.
+
+Main Git operations:
+
+* Push → Upload local files to GitHub
+* Pull → Download latest updates from GitHub
+* Branch → Create separate development line
+* Merge → Combine branches together
+
+---
+
+# Procedure:
+
+## Step 1: Create GitHub Account
+
+1. Open browser.
+2. Visit GitHub website:
+   https://github.com
+3. Click on “Sign Up”.
+4. Enter:
+
+   * Username
+   * Email
+   * Password
+5. Verify account and complete registration.
+6. Login to GitHub.
+
+---
+
+## Step 2: Install Git
+
+1. Download Git from:
+   https://git-scm.com/downloads
+2. Install Git using default settings.
+3. Open terminal/command prompt.
+4. Verify installation using command:
+
+```bash
+git --version
+```
+
+Example Output:
+
+```bash
+git version 2.xx.x
+```
+
+---
+
+## Step 3: Configure Git
+
+Configure username and email:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+```
+
+Check configuration:
+
+```bash
+git config --list
+```
+
+---
+
+## Step 4: Create Local Repository
+
+Create project folder:
+
+```bash
+mkdir Git_Practical
+cd Git_Practical
+```
+
+Initialize Git repository:
+
+```bash
+git init
+```
+
+Output:
+
+```bash
+Initialized empty Git repository
+```
+
+---
+
+## Step 5: Create a File
+
+Create a text file named `hello.txt`
+
+Add content:
+
+```text
+Hello GitHub
+```
+
+---
+
+## Step 6: Add and Commit File
+
+Add file to staging area:
+
+```bash
+git add hello.txt
+```
+
+Commit changes:
+
+```bash
+git commit -m "First commit"
+```
+
+---
+
+## Step 7: Create Repository on GitHub
+
+1. Login to GitHub.
+2. Click on “New Repository”.
+3. Enter repository name:
+   Git_Practical
+4. Click “Create Repository”.
+
+---
+
+## Step 8: Connect Local Repository to GitHub
+
+Copy repository URL from GitHub.
+
+Example:
+
+```bash
+https://github.com/username/Git_Practical.git
+```
+
+Add remote repository:
+
+```bash
+git remote add origin https://github.com/username/Git_Practical.git
+```
+
+Verify remote:
+
+```bash
+git remote -v
+```
+
+---
+
+## Step 9: Push Files to GitHub
+
+Rename branch to main:
+
+```bash
+git branch -M main
+```
+
+Push files to GitHub:
+
+```bash
+git push -u origin main
+```
+
+Result:
+Files are uploaded to GitHub repository.
+
+---
+
+## Step 10: Demonstrate Pull Command
+
+Pull latest changes from GitHub:
+
+```bash
+git pull origin main
+```
+
+Result:
+Latest repository changes are downloaded.
+
+---
+
+## Step 11: Demonstrate Branch Command
+
+Create new branch:
+
+```bash
+git branch feature
+```
+
+Switch to feature branch:
+
+```bash
+git checkout feature
+```
+
+Check available branches:
+
+```bash
+git branch
+```
+
+Example Output:
+
+```bash
+* feature
+  main
+```
+
+---
+
+## Step 12: Modify File in Branch
+
+Edit `hello.txt`
+
+Updated content:
+
+```text
+Hello GitHub
+This is feature branch
+```
+
+Add and commit changes:
+
+```bash
+git add hello.txt
+git commit -m "Updated feature branch"
+```
+
+---
+
+## Step 13: Merge Branch
+
+Switch back to main branch:
+
+```bash
+git checkout main
+```
+
+Merge feature branch into main:
+
+```bash
+git merge feature
+```
+
+Output:
+
+```bash
+Fast-forward
+```
+
+---
+
+## Step 14: Push Merged Changes
+
+Push merged code to GitHub:
+
+```bash
+git push origin main
+```
+
+---
+
+# Commands Used:
+
+| Command      | Description             |
+| ------------ | ----------------------- |
+| git init     | Initialize repository   |
+| git add      | Add files to staging    |
+| git commit   | Save changes            |
+| git push     | Upload files to GitHub  |
+| git pull     | Download latest updates |
+| git branch   | Create/list branches    |
+| git checkout | Switch branch           |
+| git merge    | Merge branches          |
+
+---
+
+# Result:
+
+Successfully created a GitHub account and demonstrated Git commands:
+
+* Push
+* Pull
+* Branch
+* Merge
+
+using Git and GitHub successfully.
