@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Department Grid View</title>
+
+    <!-- jQuery Mobile CDN -->
+    <link rel="stylesheet"
+          href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f7fc;
+        }
+
+        .heading{
+            text-align:center;
+            color:#0d6efd;
+            margin:25px 0;
+            font-size:32px;
+        }
+
+        .grid-container{
+
+            display:grid;
+
+            grid-template-columns: repeat(5,1fr);
+
+            gap:25px;
+
+            padding:30px;
+        }
+
+        .dept-item{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+        }
+
+        .dept-card{
+
+            background:#4a76c9;
+
+            color:white;
+
+            text-align:center;
+
+            padding:25px;
+
+            border-radius:18px;
+
+            box-shadow:0 4px 12px rgba(0,0,0,0.2);
+
+            display:flex;
+
+            flex-direction:column;
+
+            justify-content:center;
+
+            align-items:center;
+
+            gap:20px;
+
+            min-height:220px;
+
+            transition:0.3s;
+        }
+
+        .dept-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .dept-card h2{
+            font-size:28px;
+        }
+
+        .dept-btn{
+
+            background:#f5822a !important;
+
+            border:none !important;
+
+            color:white !important;
+
+            font-size:16px !important;
+
+            border-radius:10px !important;
+
+            width:80%;
+
+            margin:0 auto !important;
+
+            font-weight:bold !important;
+        }
+
+        .info-page{
+            padding:25px;
+        }
+
+        .info-box{
+
+            background:white;
+
+            padding:30px;
+
+            border-radius:15px;
+
+            box-shadow:0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .info-box h2{
+            color:#0d6efd;
+            margin-bottom:15px;
+        }
+
+        .info-box p{
+            font-size:18px;
+            line-height:1.6;
+        }
+
+        @media(max-width:1000px){
+
+            .grid-container{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media(max-width:600px){
+
+            .grid-container{
+                grid-template-columns: 1fr;
+            }
+
+            .heading{
+                font-size:24px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+<div data-role="page" id="home">
+
+    <div data-role="header" data-theme="b">
+        <h1>Department Portal</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h2 class="heading">
+            Engineering Departments
+        </h2>
+
+        <div class="grid-container">
+
+            <!-- IT -->
+            <div class="dept-item">
+                <div class="dept-card">
+                    <h2>IT</h2>
+                </div>
+                <a href="#itpage"
+                   class="ui-btn dept-btn">
+                   Explore IT
+                </a>
+            </div>
+
+            <!-- COMP -->
+            <div class="dept-item">
+                <div class="dept-card">
+                    <h2>COMP</h2>
+                </div>
+                <a href="#comppage"
+                   class="ui-btn dept-btn">
+                   Explore COMP
+                </a>
+            </div>
+
+            <!-- ETC -->
+            <div class="dept-item">
+                <div class="dept-card">
+                    <h2>ETC</h2>
+                </div>
+                <a href="#etcpage"
+                   class="ui-btn dept-btn">
+                   Explore ETC
+                </a>
+            </div>
+
+            <!-- MECH -->
+            <div class="dept-item">
+                <div class="dept-card">
+                    <h2>MECH</h2>
+                </div>
+                <a href="#mechpage"
+                   class="ui-btn dept-btn">
+                   Explore MECH
+                </a>
+            </div>
+
+            <!-- ELECT -->
+            <div class="dept-item">
+                <div class="dept-card">
+                    <h2>ELECT</h2>
+                </div>
+                <a href="#electpage"
+                   class="ui-btn dept-btn">
+                   Explore ELECT
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- IT PAGE -->
+<div data-role="page" id="itpage">
+
+    <div data-role="header" data-theme="b">
+
+        <a href="#home" data-icon="back">
+            Back
+        </a>
+
+        <h1>IT Department</h1>
+
+    </div>
+
+    <div class="info-page">
+
+        <div class="info-box">
+
+            <h2>Information Technology</h2>
+
+            <p>
+                IT department focuses on software development,
+                web technologies, networking, cloud computing
+                and database management systems.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- COMP PAGE -->
+<div data-role="page" id="comppage">
+
+    <div data-role="header" data-theme="b">
+
+        <a href="#home" data-icon="back">
+            Back
+        </a>
+
+        <h1>COMP Department</h1>
+
+    </div>
+
+    <div class="info-page">
+
+        <div class="info-box">
+
+            <h2>Computer Engineering</h2>
+
+            <p>
+                Computer Engineering focuses on programming,
+                operating systems, AI, machine learning,
+                software engineering and system design.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ETC PAGE -->
+<div data-role="page" id="etcpage">
+
+    <div data-role="header" data-theme="b">
+
+        <a href="#home" data-icon="back">
+            Back
+        </a>
+
+        <h1>ETC Department</h1>
+
+    </div>
+
+    <div class="info-page">
+
+        <div class="info-box">
+
+            <h2>Electronics & Telecommunication</h2>
+
+            <p>
+                ETC department studies communication systems,
+                embedded systems, digital electronics and
+                signal processing.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MECH PAGE -->
+<div data-role="page" id="mechpage">
+
+    <div data-role="header" data-theme="b">
+
+        <a href="#home" data-icon="back">
+            Back
+        </a>
+
+        <h1>MECH Department</h1>
+
+    </div>
+
+    <div class="info-page">
+
+        <div class="info-box">
+
+            <h2>Mechanical Engineering</h2>
+
+            <p>
+                Mechanical Engineering deals with machines,
+                thermal engineering, manufacturing processes
+                and industrial automation.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ELECT PAGE -->
+<div data-role="page" id="electpage">
+
+    <div data-role="header" data-theme="b">
+
+        <a href="#home" data-icon="back">
+            Back
+        </a>
+
+        <h1>Electrical Department</h1>
+
+    </div>
+
+    <div class="info-page">
+
+        <div class="info-box">
+
+            <h2>Electrical Engineering</h2>
+
+            <p>
+                Electrical department studies electrical machines,
+                circuits, power systems and renewable energy systems.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
