@@ -1,0 +1,30 @@
+.profile-card {
+    width: min(440px, 100%);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(3px);
+    padding: 34px;
+    border-radius: 16px;
+    border: 1px solid rgba(13, 110, 253, 0.1);
+    box-shadow: 0 14px 34px rgba(19, 45, 91, 0.14);
+}
+
+.profile-card h2 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 22px;
+    font-size: 1.55rem;
+}
+
+.details {
+    display: grid;
+    gap: 12px;
+}
+
+.details p {
+    font-size: 1rem;
+    color: #2b3b52;
+    background: #f4f8ff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e1ebff;
+}
