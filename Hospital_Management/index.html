@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hospital Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #0077b6, #00b4d8);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Form Card */
+        .form-card {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .count-box {
+            background-color: #caf0f8;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>Hospital Management System</h1>
+    <p>Patient Registration Portal</p>
+</div>
+
+<!-- Registration Form -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card form-card p-4">
+
+                <h3 class="text-center mb-4">Patient Registration Form</h3>
+
+                <form id="patientForm">
+
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label class="form-label">Patient Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                    <!-- Age -->
+                    <div class="mb-3">
+                        <label class="form-label">Age</label>
+                        <input type="number" class="form-control" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select" required>
+                            <option value="">Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="mb-3">
+                        <label class="form-label">Contact Number</label>
+                        <input type="tel" class="form-control" required>
+                    </div>
+
+                    <!-- Disease -->
+                    <div class="mb-3">
+                        <label class="form-label">Disease / Problem</label>
+                        <textarea class="form-control" rows="3" required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            Register Patient
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- Patient Count -->
+                <div class="count-box mt-4">
+                    <h4>Total Patients Registered</h4>
+                    <h2 id="patientCount">0</h2>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>© 2026 Hospital Management System</p>
+</div>
+
+<!-- JavaScript -->
+<script>
+    let count = 0;
+
+    document.getElementById("patientForm").addEventListener("submit", function(event) {
+
+        // Prevent page refresh
+        event.preventDefault();
+
+        // Increase count
+        count++;
+
+        // Display updated count
+        document.getElementById("patientCount").innerText = count;
+
+        // Success message
+        alert("Patient Registered Successfully!");
+
+        // Reset form
+        document.getElementById("patientForm").reset();
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
