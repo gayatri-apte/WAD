@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Registration</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color:#f0f8ff;
+            font-family:Arial, sans-serif;
+        }
+
+        .container-box{
+            max-width:600px;
+            margin:auto;
+            margin-top:50px;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:#0d6efd;
+        }
+
+        .btn-custom{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-box">
+
+    <h2>User Registration Form</h2>
+
+    <form id="registrationForm">
+
+        <!-- First Name -->
+        <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" id="fname" class="form-control" required>
+        </div>
+
+        <!-- Last Name -->
+        <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" id="lname" class="form-control" required>
+        </div>
+
+        <!-- DOB -->
+        <div class="mb-3">
+            <label class="form-label">Date of Birth</label>
+            <input type="date" id="dob" class="form-control" required>
+        </div>
+
+        <!-- Gender -->
+        <div class="mb-3">
+            <label class="form-label">Gender</label><br>
+
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+        </div>
+
+        <!-- Mobile -->
+        <div class="mb-3">
+            <label class="form-label">Mobile Number</label>
+            <input type="tel" id="mobile" class="form-control"
+                   pattern="[0-9]{10}"
+                   maxlength="10"
+                   required>
+            <small class="text-danger">
+                Mobile number must be exactly 10 digits
+            </small>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+            <label class="form-label">Email ID</label>
+            <input type="email" id="email" class="form-control" required>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary btn-custom">
+            Register
+        </button>
+
+    </form>
+
+</div>
+
+<!-- JavaScript -->
+<script>
+
+document.getElementById("registrationForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    // Get gender
+    let gender = document.querySelector('input[name="gender"]:checked').value;
+
+    // Create object
+    let user = {
+        firstName: document.getElementById("fname").value,
+        lastName: document.getElementById("lname").value,
+        dob: document.getElementById("dob").value,
+        gender: gender,
+        mobile: document.getElementById("mobile").value,
+        email: document.getElementById("email").value
+    };
+
+    // Get existing data
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Push new user
+    users.push(user);
+
+    // Save back to localStorage
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Registration Successful!");
+
+    // Redirect to display page
+    window.location.href = "display.html";
+
+});
+
+</script>
+
+</body>
+</html>
